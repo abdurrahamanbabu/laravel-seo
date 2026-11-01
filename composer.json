@@ -1,0 +1,82 @@
+{
+    "name": "abdur-rahaman/laravel-seo",
+    "description": "A comprehensive SEO management package for Laravel applications, inspired by Yoast SEO.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "seo",
+        "meta",
+        "open-graph",
+        "twitter-cards",
+        "sitemap",
+        "schema.org",
+        "json-ld",
+        "yoast"
+    ],
+    "homepage": "https://github.com/abdurrahaman/laravel-seo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdurrahaman",
+            "email": "abdurrahaman@example.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/database": "^11.0|^12.0|^13.0",
+        "illuminate/view": "^11.0|^12.0|^13.0",
+        "illuminate/routing": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/validation": "^11.0|^12.0|^13.0",
+        "illuminate/cache": "^11.0|^12.0|^13.0",
+        "illuminate/console": "^11.0|^12.0|^13.0",
+        "illuminate/filesystem": "^11.0|^12.0|^13.0",
+        "illuminate/config": "^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.0|^12.0",
+        "pestphp/pest": "^3.0",
+        "mockery/mockery": "^1.6",
+        "laravel/pint": "^1.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abdurrahaman\\LaravelSeo\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Abdurrahaman\\LaravelSeo\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abdurrahaman\\LaravelSeo\\Providers\\LaravelSeoServiceProvider"
+            ],
+            "aliases": {
+                "SEO": "Abdurrahaman\\LaravelSeo\\Facades\\SEO"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
