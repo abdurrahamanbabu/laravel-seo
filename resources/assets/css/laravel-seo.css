@@ -55,6 +55,7 @@
     font-size: 0.8rem;
     font-weight: 500;
     color: #6c757d;
+    margin-left: 6px;
 }
 
 .seo-char-count.seo-count-good { color: #198754; }
