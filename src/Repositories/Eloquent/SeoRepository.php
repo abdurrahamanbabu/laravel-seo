@@ -141,7 +141,6 @@ protected function hydrate(array $attributes): SeoMeta
     }
 
 
-
     protected function cacheKey(Model $model): string
     {
         return config('laravel-seo.cache.prefix', 'laravel_seo_')
